@@ -10,7 +10,6 @@ body.dark-mode {
   color: #ffffff;
 }
 
-/* Header styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -64,7 +63,7 @@ body.dark-mode #dark-mode-text {
 }
 
 .container {
-  margin: 50px auto 20px auto; /* Adjusted margin to accommodate the header and back button */
+  margin: 20px auto;
   padding: 20px;
   max-width: 1200px;
   border-radius: 5px;
@@ -73,32 +72,48 @@ body.dark-mode #dark-mode-text {
 
 .country-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .country-flag {
-  width: 45%;
+  width: 40%;
   height: auto;
-  /* border-radius: 5px; */
 }
 
 .country-details {
-  width: 50%;
-  text-align: left;
+  width: 100%;
+  text-align: center;
 }
 
 .country-details h2 {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
-.country-details .text-borders {
-  margin: 5px 0;
-  font-size: 16px;
-  margin-top: 60px;
+.text-point {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: center;
+  text-align-last: left;
 }
 
-/* Styles for border countries */
+.first-text-point {
+  margin: 20px;
+  text-align: center;
+}
+
+.second-text-point {
+  margin: 20px;
+  text-align: center;
+}
+
+.text-borders {
+  text-align: left;
+  justify-content: center;
+  margin-left: 160px;
+}
+
 .border-country {
   display: inline-block;
   padding: 5px 10px;
@@ -122,25 +137,25 @@ body.dark-mode a {
   color: inherit;
 }
 
-/* Back button styles */
 .back-button {
-  margin: 80px 20px 20px 20px; /* Adjusted margin to accommodate the header */
+  margin-top: 150px;
+  margin-left: 100px;
 }
 
 .back-button a {
   display: flex;
   align-items: center;
-  width: 4%;
+  justify-content: center;
+  width: 10%;
   text-decoration: none;
   color: #333;
   font-size: 16px;
-  margin-left: 6rem;
-  margin-top: 7rem;
-  padding: 10px 20px; /* Added padding for better button appearance */
-  background-color: #fff; /* Background color for the button */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
-  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+  padding: 10px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
 body.dark-mode .back-button a {
@@ -150,7 +165,7 @@ body.dark-mode .back-button a {
 }
 
 .back-button a:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hover effect for the button */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .arrow {
@@ -158,15 +173,74 @@ body.dark-mode .back-button a {
   font-size: 20px;
 }
 
-.text-point{
-  display: flex;
-}
+@media (max-width: 768px) {
+  header h1 {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
 
-.first-text-point{
-  margin-right: 100px;
-}
+  header #dark-mode-toggle {
+    padding-right: 0.3rem;
+  }
 
-.second-text-point{
-  margin-left: 50px;
-}
+  #dark-mode-text {
+    font-size: 14px;
+    margin-right: 20px;
+  }
 
+  #dark-mode-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .country-container {
+    display: inline;
+    /* align-items: center; */
+  }
+
+  .country-details {
+    width: 100%;
+    text-align: left;
+  }
+
+  .country-details h2 {
+    margin-left: 30px;
+  }
+
+  .country-flag {
+    width: 80%;
+    height: auto;
+  }
+
+  .text-point {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+    text-align-last: left;
+  }
+
+  .back-button a {
+    width: 30%;
+    padding: 10px;
+    margin-top: -50px;
+    margin-left: -80px;
+  }
+
+  .text-borders {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .border-country {
+    display: flex;
+  }
+
+  #borders {
+    display: flex;
+    flex-wrap: wrap;
+    border: 0.5px #ccc;
+    border-radius: 3px;
+  }
+}

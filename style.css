@@ -157,7 +157,7 @@ ul {
 }
 
 li {
-  border: 1px  #ccc;
+  border: 1px #ccc;
   border-radius: 5px;
   background-color: #fff;
   display: flex;
@@ -166,7 +166,6 @@ li {
   overflow: hidden;
   text-align: left;
 }
-
 
 body.dark-mode li {
   background-color: #2e2e2e;
@@ -190,9 +189,8 @@ li p {
 
 .flag-container .flag {
   width: 100%;
-  height: 50%; 
+  height: 50%;
   position: relative;
-   /* width: 100%; */
   top: 0;
   left: 0;
   object-fit: cover;
@@ -201,11 +199,9 @@ li p {
 .flag {
   width: 100%;
   height: 50%;
-  /* position: absolute; */
   top: 0;
   left: 0;
   object-fit: cover;
-  /* border-bottom: 1px #ccc; Optional border for separation */
 }
 
 /* Error message styles */
@@ -215,33 +211,6 @@ li p {
   margin-top: 10px;
 }
 
-/* Styles for country.html */
-.country-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* .country-flag {
-  width: 100%; /* Ensure flag takes entire box *
-  height: auto;
-  border-radius: 5px;
-} */
-/* 
-.country-details {
-  width: 50%;
-  text-align: left;
-}
-
-.country-details h2 {
-  margin-top: 0;
-}
-
-.country-details p {
-  margin: 5px 0;
-  font-size: 16px;
-} */
-
 a {
   text-decoration: none;
   color: inherit;
@@ -249,4 +218,61 @@ a {
 
 body.dark-mode a {
   color: inherit;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+
+  header #dark-mode-toggle {
+    padding-right: 0.3rem;
+  }
+
+  #dark-mode-text {
+    font-size: 14px;
+    /* color: #333; */
+    margin-right: 20px;
+  }
+
+  #dark-mode-icon {
+  width: 15px;
+  height: 15px;
+}
+
+  .search-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .filter {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .container {
+    margin: 70px 10px 10px 10px;
+    padding: 10px;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  /* .back-button a {
+    width: auto;
+    padding: 10px;
+    margin: 20px auto;
+  } */
 }
