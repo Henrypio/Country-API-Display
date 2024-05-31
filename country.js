@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const countryName = urlParams.get("country");
-  console.log("Country Name:", countryName); // Log the country name to ensure it's correctly extracted
+  console.log("Country Name:", countryName); 
 
   const countryFlag = document.getElementById("country-flag");
   const countryNameElement = document.getElementById("country-name");
@@ -23,11 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log("API Response:", data); // Log the API response to ensure the data is correctly fetched
-
+        console.log("API Response:", data); 
         if (data.status !== 404) {
           const countryData = data[0];
-          console.log("Country Data:", countryData); // Log the first country data to check its structure
+          console.log("Country Data:", countryData); 
 
           countryFlag.src = countryData.flags.svg;
           countryFlag.alt = `Flag of ${countryData.name.common}`;
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
           languagesElement.textContent = countryData.languages
             ? Object.values(countryData.languages).join(", ")
             : "N/A";
-          bordersElement.innerHTML = ""; // Clear the borders element
+          bordersElement.innerHTML = ""; 
 
           if (countryData.borders && countryData.borders.length > 0) {
             countryData.borders.forEach((border) => {

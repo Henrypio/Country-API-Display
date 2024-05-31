@@ -11,7 +11,7 @@ body.dark-mode {
   color: #ffffff;
 }
 
-/* Header styles */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -64,9 +64,9 @@ body.dark-mode #dark-mode-text {
   color: #fff;
 }
 
-/* Main container styles */
+
 .container {
-  margin: 80px auto 20px auto; /* Adjusted margin to accommodate the header and search/filter */
+  margin: 80px auto 20px auto; 
   padding: 20px;
   max-width: 1200px;
   border-radius: 5px;
@@ -78,7 +78,6 @@ body.dark-mode .container {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Search and filter section styles */
 .search-filter {
   display: flex;
   justify-content: space-between;
@@ -147,13 +146,13 @@ body.dark-mode .container {
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
 }
 
-/* Country list styles */
+
 ul {
   list-style-type: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem; /* Adjusted gap for better spacing */
+  gap: 2rem; 
 }
 
 li {
@@ -162,7 +161,7 @@ li {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start */
+  align-items: flex-start;
   overflow: hidden;
   text-align: left;
 }
@@ -204,7 +203,7 @@ li p {
   object-fit: cover;
 }
 
-/* Error message styles */
+
 #error-message {
   display: none;
   color: red;
@@ -270,9 +269,4 @@ body.dark-mode a {
     margin-bottom: 20px;
   }
 
-  /* .back-button a {
-    width: auto;
-    padding: 10px;
-    margin: 20px auto;
-  } */
 }
